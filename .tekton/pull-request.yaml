@@ -21,12 +21,9 @@ spec:
       value: ./Containerfile
     - name: path-context
       value: .
-    - name: hacbs
-      value: "true"
   pipelineRef:
     name: docker-build
-    # TODO: Use replace git-commit tag with a floating tag so it can be managed by renovate bot.
-    bundle: quay.io/redhat-appstudio-tekton-catalog/pipeline-docker-build:165e81585fb7afd4fb17be0ef3851cb3962e281d@sha256:21e4124faa37485c8c170f3b367b4ae9334c1b6bc5420b802fbdcebd31069583
+    bundle: quay.io/redhat-appstudio-tekton-catalog/pipeline-hacbs-docker-build:devel@sha256:10388efd2f12f954959fc3ee9198dd6a8a010ede24fac23d631cb146f73e6d58
   workspaces:
     - name: workspace
       volumeClaimTemplate:
