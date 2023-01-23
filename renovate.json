@@ -9,7 +9,7 @@
     "fileMatch": ["^Containerfile$"]
   },
   "tekton": {
-    "fileMatch": ["^\\.tekton/*\\.yaml$"],
+    "fileMatch": ["\\.yaml$", "\\.yml$"],
     "pinDigests": true
   }
 }
