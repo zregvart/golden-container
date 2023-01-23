@@ -23,7 +23,7 @@ spec:
       value: .
   pipelineRef:
     name: docker-build
-    bundle: quay.io/redhat-appstudio-tekton-catalog/pipeline-hacbs-docker-build:devel@sha256:10388efd2f12f954959fc3ee9198dd6a8a010ede24fac23d631cb146f73e6d58
+    bundle: quay.io/redhat-appstudio-tekton-catalog/pipeline-hacbs-docker-build:devel@sha256:993781229398854fc04cc471bd56da65a4167254a41c5b6314f56048e0cbe5c8
   workspaces:
     - name: workspace
       volumeClaimTemplate:
