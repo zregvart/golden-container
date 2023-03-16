@@ -5,6 +5,9 @@
   ],
   "timezone": "America/New_York",
   "schedule": ["before 10pm"],
+  "automerge": true,
+  "automergeType": "pr",
+  "platformAutomerge": true,
   "dockerfile": {
     "fileMatch": ["^Containerfile$"]
   },
