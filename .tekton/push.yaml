@@ -20,6 +20,8 @@ spec:
       value: ./Containerfile
     - name: path-context
       value: .
+    - name: hermetic
+      value: 'true'
   pipelineRef:
     name: docker-build
     bundle: quay.io/redhat-appstudio-tekton-catalog/pipeline-docker-build:devel@sha256:1f4772b5a700fae4ec99aab21a36ed60ff3d86a8b0ab65c32376bc28b4c39c8a
