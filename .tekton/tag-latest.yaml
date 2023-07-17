@@ -46,18 +46,4 @@ spec:
                 echo
                 echo ${SRC_REF} has been pushed, copying to ${TARGET_REF}
 
-                skopeo copy --authfile=/secret/default-push-secret/.dockerconfigjson docker://${SRC_REF} docker://${TARGET_REF}
-              volumeMounts:
-                - mountPath: /var/lib/containers
-                  name: varlibcontainers
-                - mountPath: /secret/default-push-secret
-                  name: default-push-secret
-          volumes:
-            - emptyDir: {}
-              name: varlibcontainers
-            - csi:
-                driver: csi.sharedresource.openshift.io
-                readOnly: true
-                volumeAttributes:
-                  sharedSecret: redhat-appstudio-user-workload
-              name: default-push-secret
+                skopeo copy docker://${SRC_REF} docker://${TARGET_REF}
