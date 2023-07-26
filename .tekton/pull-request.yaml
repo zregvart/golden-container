@@ -27,7 +27,7 @@ spec:
       value: snyk-shared-secret
   pipelineRef:
     name: docker-build
-    bundle: quay.io/redhat-appstudio-tekton-catalog/pipeline-docker-build:devel@sha256:42dcf53586f3ad0e3841cb23477afd69a7ce771edc18a9141648f36471deb65b
+    bundle: quay.io/redhat-appstudio-tekton-catalog/pipeline-docker-build:devel@sha256:c57076bcef81378e044152af82341565f76b66d8055898feba3e609d9d5c4c03
   workspaces:
     - name: workspace
       volumeClaimTemplate:
