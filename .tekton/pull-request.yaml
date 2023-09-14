@@ -29,7 +29,7 @@ spec:
     resolver: bundles
     params:
       - name: bundle
-        value: quay.io/redhat-appstudio-tekton-catalog/pipeline-docker-build:devel@sha256:4cbaa1e6aadd0db146a7d2d3880988e3640c18553571e1e2cb653e1375173478
+        value: quay.io/redhat-appstudio-tekton-catalog/pipeline-docker-build:devel@sha256:693ba9cedc5c90481420aebb9b8f059e8fcc2bd98ba3ccc7be6a8d7d8dd584e8
       - name: name
         value: docker-build
       - name: kind
