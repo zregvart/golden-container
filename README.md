@@ -11,5 +11,3 @@ in-cluster public key: `k8s://openshift-pipelines/public-key`.
 
 Best use `hack/rebuild.sh` from [ec-cli](https://github.com/enterprise-contract/ec-cli). To build manually create a `PipelineRun` based on [pull-request.yaml](./.tekton/pull-request.yaml).
 Replace values wrapped in double curly brances, e.g. `{{ revision }}`, with the expected literal, e.g. `main`.
-
-Well, hello there
