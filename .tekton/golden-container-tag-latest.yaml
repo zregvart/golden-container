@@ -1,14 +1,21 @@
 ---
-apiVersion: tekton.dev/v1beta1
+apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
-  name: contract-golden-image-on-tag-latest
   annotations:
+    build.appstudio.openshift.io/repo: https://github.com/enterprise-contract/golden-container?rev={{revision}}
     build.appstudio.redhat.com/commit_sha: '{{revision}}'
     build.appstudio.redhat.com/target_branch: '{{target_branch}}'
     pipelinesascode.tekton.dev/max-keep-runs: "3"
-    pipelinesascode.tekton.dev/on-event: '[push]'
-    pipelinesascode.tekton.dev/on-target-branch: '[main]'
+    pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch
+      == "main"
+  creationTimestamp: null
+  labels:
+    appstudio.openshift.io/application: golden-container
+    appstudio.openshift.io/component: golden-container
+    pipelines.appstudio.openshift.io/type: build
+  name: golden-container-on-tag-latest
+  namespace: rhtap-contract-tenant
 spec:
   params:
     - name: revision
