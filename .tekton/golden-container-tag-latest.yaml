@@ -36,8 +36,8 @@ spec:
               image: registry.access.redhat.com/ubi9/skopeo:latest@sha256:b7fa62dcc48dcb5e29a3fc99a889f66faf0e493373eb837ba184ca6ba922342b
               script: |
                 #!/usr/bin/env bash
-                SRC_REF=quay.io/redhat-user-workloads/rhtap-contract-tenant/golden-container/golden-container:$(params.revision)
-                TARGET_REF=quay.io/redhat-user-workloads/rhtap-contract-tenant/golden-container/golden-container:latest
+                SRC_REF=quay.io/redhat-appstudio/ec-golden-image:$(params.revision)
+                TARGET_REF=quay.io/redhat-appstudio/ec-golden-image:latest
 
                 retries=0
                 while ! skopeo inspect docker://${SRC_REF} >/dev/null 2>&1; do

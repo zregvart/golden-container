@@ -22,7 +22,7 @@ spec:
   - name: git-url
     value: '{{repo_url}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/rhtap-contract-tenant/golden-container/golden-container:{{revision}}
+    value: quay.io/redhat-appstudio/ec-golden-image:{{revision}}
   - name: path-context
     value: .
   - name: revision
